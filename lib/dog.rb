@@ -4,10 +4,17 @@ attr_accessor :name
 
 def initialize(name)
   @name = name
-  @@all << self
 end
 
 def self.all?
   @@all
+end
+
+def self.print_all
+  puts @@all.collect{ |dog| dog.name}
+end
+
+def save
+  @@all << self
 end
 end# Add your code here
